@@ -23,7 +23,7 @@ core values, judging evidence, tournament prep, and resources.
 | | |
 |---|---|
 | Team name | Red Stormgears |
-| Team size | 4 kids: Andrew · Eric · Emily (6th grade) + Ethan (5th grade) |
+| Team size | 4 kids (three 6th graders, one 5th grader) |
 | Ages / grades | 5th–6th grade (ages ~10–12) |
 | Experience | Mixed — some new, some returning |
 | Meeting cadence | 2× per week, ~2 hours each (~4 hrs/week) |
@@ -58,3 +58,25 @@ core values, judging evidence, tournament prep, and resources.
    notes — this becomes the judging portfolio almost for free.
 5. **Core Values every meeting.** 10 minutes of team-building at the start of
    each session is not lost build time; it's what makes the team function.
+
+## About this site
+
+Every markdown file has a styled `.html` twin, and every folder has an
+`index.html` that redirects to its README — so the whole workspace works as a
+static website from any host (local disk, USB stick, GitHub Pages, …).
+
+- **Browse:** open `coach-dashboard.html` (the hub) or start at `index.html`.
+- **Edit:** change the `.md` files, then rebuild the pages:
+
+  ```bash
+  python3 _guides/build_guide.py
+  ```
+
+- **Deploy (GitHub Pages):** push this folder to a public GitHub repo, then in
+  the repo go to **Settings → Pages → Deploy from a branch → `main` / root**.
+  The `.nojekyll` file at the root is required — without it GitHub Pages
+  ignores the `_guides/` folder and every page loses its styling.
+
+**Privacy note:** this workspace is public-ready — no team member names appear
+anywhere. Rosters and reflection tables are intentionally blank; fill them in
+only in your local copy if you keep the repo public.

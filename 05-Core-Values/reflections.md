@@ -5,10 +5,10 @@ Core Values evidence for the portfolio.
 
 | Date | Meeting | What Went Well (each kid, one line) | Even Better If | Emoji mood |
 |---|---|---|---|---|
-|  |  | Andrew: <br>Eric: <br>Emily: <br>Ethan: |  |  |
-|  |  | Andrew: <br>Eric: <br>Emily: <br>Ethan: |  |  |
-|  |  | Andrew: <br>Eric: <br>Emily: <br>Ethan: |  |  |
-|  |  | Andrew: <br>Eric: <br>Emily: <br>Ethan: |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
 
 ## Mid-season Core Values self-check (week ~7)
 

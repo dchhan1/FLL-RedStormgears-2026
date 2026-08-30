@@ -14,9 +14,9 @@ opens with Core Values and closes with reflection.
 | 1:45–1:55 | Demo + reflection | Show what worked; record in notebook |
 | 1:55–2:00 | Clean-up + preview next meeting | Field reset is part of the job |
 
-**With 4 kids** (Andrew, Eric, Emily, Ethan), run one workstream per meeting
-with everyone together, or split 2+2 across robot/project when both need time
-(good default pairs: one 6th grader with Ethan).
+**With 4 kids**, run one workstream per meeting with everyone together, or
+split 2+2 across robot/project when both need time (good default: pair the
+lone 5th grader with a 6th grader).
 
 ### Meeting A (robot-leaning)
 

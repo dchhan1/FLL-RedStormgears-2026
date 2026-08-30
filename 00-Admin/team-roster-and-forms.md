@@ -4,10 +4,10 @@
 
 | Name | Grade | FLL experience | Parent/guardian email | Consent form | Media release | Notes |
 |---|---|---|---|---|---|---|
-| Andrew | 6th |  |  | ☐ | ☐ |  |
-| Eric | 6th |  |  | ☐ | ☐ |  |
-| Emily | 6th |  |  | ☐ | ☐ |  |
-| Ethan | 5th |  |  | ☐ | ☐ |  |
+|  |  |  |  | ☐ | ☐ |  |
+|  |  |  |  | ☐ | ☐ |  |
+|  |  |  |  | ☐ | ☐ |  |
+|  |  |  |  | ☐ | ☐ |  |
 
 ## Coaches / mentors
 

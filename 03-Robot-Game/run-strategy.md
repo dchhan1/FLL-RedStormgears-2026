@@ -21,8 +21,8 @@ practice session.
 
 ## Match-day operating procedure
 
-1. **Pilot + copilot** chosen for the round — rotate so all four (Andrew, Eric,
-   Emily, Ethan) get table time across the three rounds.
+1. **Pilot + copilot** chosen for the round — rotate so all four kids get
+   table time across the three rounds.
 2. Pre-round checklist: correct program loaded ✓ · attachment seated ✓ · robot
    aligned to jig ✓ · field reset verified by reading the run sheet ✓.
 3. After each round: log the score, note the failure, decide the change **calmly** —

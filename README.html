@@ -26,7 +26,7 @@
 </ul>
 <p>Everything your team needs in one place: plans, meetings, robot game, project, core values, judging evidence, tournament prep, and resources.</p>
 <h2>Team profile</h2>
-<div class="tblwrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Team name</td><td>Red Stormgears</td></tr><tr><td>Team size</td><td>4 kids: Andrew · Eric · Emily (6th grade) + Ethan (5th grade)</td></tr><tr><td>Ages / grades</td><td>5th–6th grade (ages ~10–12)</td></tr><tr><td>Experience</td><td>Mixed — some new, some returning</td></tr><tr><td>Meeting cadence</td><td>2× per week, ~2 hours each (~4 hrs/week)</td></tr><tr><td>Equipment</td><td>SPIKE Prime kit, practice field table, season mat + mission models</td></tr></tbody></table></div>
+<div class="tblwrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Team name</td><td>Red Stormgears</td></tr><tr><td>Team size</td><td>4 kids (three 6th graders, one 5th grader)</td></tr><tr><td>Ages / grades</td><td>5th–6th grade (ages ~10–12)</td></tr><tr><td>Experience</td><td>Mixed — some new, some returning</td></tr><tr><td>Meeting cadence</td><td>2× per week, ~2 hours each (~4 hrs/week)</td></tr><tr><td>Equipment</td><td>SPIKE Prime kit, practice field table, season mat + mission models</td></tr></tbody></table></div>
 <h2>Folder map</h2>
 <div class="tblwrap"><table><thead><tr><th>Folder</th><th>What goes here</th></tr></thead><tbody><tr><td><a href="00-Admin/index.html">00-Admin</a></td><td>Roster, forms tracking, inventory, budget</td></tr><tr><td><a href="01-Season-Plan/index.html">01-Season-Plan</a></td><td>Season calendar, week-by-week arc, milestones</td></tr><tr><td><a href="02-Meetings/index.html">02-Meetings</a></td><td>Meeting plans &amp; notes, week by week</td></tr><tr><td><a href="03-Robot-Game/index.html">03-Robot-Game</a></td><td>Mission analysis, run strategy, code versions, design docs</td></tr><tr><td><a href="04-Innovation-Project/index.html">04-Innovation-Project</a></td><td>Research log, solution design, presentation</td></tr><tr><td><a href="05-Core-Values/index.html">05-Core-Values</a></td><td>Team-building activities, reflections</td></tr><tr><td><a href="06-Judging-Portfolio/index.html">06-Judging-Portfolio</a></td><td>Evidence binder for all three judged sessions</td></tr><tr><td><a href="07-Tournament/index.html">07-Tournament</a></td><td>Event-day checklist, packing list</td></tr><tr><td><a href="08-Resources/index.html">08-Resources</a></td><td>Curated links, guides, training materials</td></tr></tbody></table></div>
 <p><strong>Start here:</strong> <a href="CHECKLIST.html">CHECKLIST.md</a> → the master season checklist.</p>
@@ -43,6 +43,18 @@
 <li><strong>Core Values every meeting.</strong> 10 minutes of team-building at the start of</li>
 <p>   each session is not lost build time; it's what makes the team function.</p>
 </ol>
+<h2>About this site</h2>
+<p>Every markdown file has a styled <code>.html</code> twin, and every folder has an <code>index.html</code> that redirects to its README — so the whole workspace works as a static website from any host (local disk, USB stick, GitHub Pages, …).</p>
+<ul>
+<li><strong>Browse:</strong> open <code>coach-dashboard.html</code> (the hub) or start at <code>index.html</code>.</li>
+<li><strong>Edit:</strong> change the <code>.md</code> files, then rebuild the pages:</li>
+</ul>
+<p>  ``<code>bash   python3 _guides/build_guide.py   </code>``</p>
+<ul>
+<li><strong>Deploy (GitHub Pages):</strong> push this folder to a public GitHub repo, then in</li>
+<p>  the repo go to <strong>Settings → Pages → Deploy from a branch → <code>main</code> / root</strong>.   The <code>.nojekyll</code> file at the root is required — without it GitHub Pages   ignores the <code>_guides/</code> folder and every page loses its styling.</p>
+</ul>
+<p><strong>Privacy note:</strong> this workspace is public-ready — no team member names appear anywhere. Rosters and reflection tables are intentionally blank; fill them in only in your local copy if you keep the repo public.</p>
 </main>
 <footer>
   Part of the Red Stormgears season workspace ·

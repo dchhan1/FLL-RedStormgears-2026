@@ -1,7 +1,7 @@
 # Week-by-Week Season Arc
 
 Goals, exit criteria, and coach focus per phase. For a small mixed-experience
-team of four (Andrew, Eric, Emily — 6th; Ethan — 5th; 2×/week, 2 hrs).
+team of four (three 6th graders, one 5th grader; 2×/week, 2 hrs).
 
 ---
 

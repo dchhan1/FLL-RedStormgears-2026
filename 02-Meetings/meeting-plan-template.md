@@ -33,10 +33,10 @@ What we showed: ______________________
 
 | Kid | One thing that worked | One thing to change |
 |---|---|---|
-| Andrew |  |  |
-| Eric |  |  |
-| Emily |  |  |
-| Ethan |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
 ## Artifacts
 
