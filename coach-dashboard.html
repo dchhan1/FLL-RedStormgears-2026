@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BIOGLOW Coach Field Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F2F5EE;
+  --surface:#FBFCF8;
+  --surface-2:#EBF0E3;
+  --ink:#1E2B22;
+  --ink-soft:#52604F;
+  --accent:#2F6B44;
+  --accent-ink:#F7FAF5;
+  --line:#D5DECA;
+  --line-soft:#E4EADA;
+  --amber:#A8681C;
+  --rust:#9C4A2F;
+  --ph-pre:#6E7D66;
+  --ph-kick:#4C8A55;
+  --ph-early:#2F6B44;
+  --ph-mid:#22553A;
+  --ph-int:#A8681C;
+  --ph-reh:#9C4A2F;
+  --ph-tour:#4A4238;
+  --focus:#2F6B44;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1712;
+    --surface:#17221B;
+    --surface-2:#1D2A21;
+    --ink:#E8EEE4;
+    --ink-soft:#A6B3A2;
+    --accent:#7CC08F;
+    --accent-ink:#0F1712;
+    --line:#2B3B2F;
+    --line-soft:#233127;
+    --amber:#D89A4E;
+    --rust:#C97F5F;
+    --ph-pre:#8A9983;
+    --ph-kick:#6FB478;
+    --ph-early:#7CC08F;
+    --ph-mid:#5FA373;
+    --ph-int:#D89A4E;
+    --ph-reh:#C97F5F;
+    --ph-tour:#B8AC98;
+    --focus:#7CC08F;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1712;
+  --surface:#17221B;
+  --surface-2:#1D2A21;
+  --ink:#E8EEE4;
+  --ink-soft:#A6B3A2;
+  --accent:#7CC08F;
+  --accent-ink:#0F1712;
+  --line:#2B3B2F;
+  --line-soft:#233127;
+  --amber:#D89A4E;
+  --rust:#C97F5F;
+  --ph-pre:#8A9983;
+  --ph-kick:#6FB478;
+  --ph-early:#7CC08F;
+  --ph-mid:#5FA373;
+  --ph-int:#D89A4E;
+  --ph-reh:#C97F5F;
+  --ph-tour:#B8AC98;
+  --focus:#7CC08F;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:15px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px 72px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:2px}
+h1,h2,h3{font-family:"Bitter",Georgia,serif;text-wrap:balance;line-height:1.18;margin:0}
+p{margin:0}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- header ---------- */
+header.masthead{
+  padding:44px 0 26px;
+  border-bottom:1px solid var(--line);
+  display:flex;flex-direction:column;gap:14px;
+}
+.eyebrow{
+  font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.masthead h1{font-size:clamp(30px,4.6vw,44px);font-weight:700;letter-spacing:-.01em}
+.masthead .deck{max-width:64ch;color:var(--ink-soft);font-size:16px;margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12.5px;font-weight:500;color:var(--ink);
+  border:1px solid var(--line);border-radius:999px;
+  padding:4px 11px;background:var(--surface);
+}
+.chip b{font-weight:600;color:var(--ink-soft)}
+
+/* ---------- sections ---------- */
+section{padding:34px 0 6px;border-bottom:1px solid var(--line-soft)}
+section:last-of-type{border-bottom:0}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+.sec-head h2{font-size:21px;font-weight:600}
+.sec-head .kicker{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+
+/* ---------- fact strip ---------- */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:10px}
+.fact{
+  background:var(--surface);border:1px solid var(--line);border-radius:10px;
+  padding:14px 15px;display:flex;flex-direction:column;gap:5px;
+}
+.fact .label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.fact .value{font-family:"Bitter",Georgia,serif;font-size:17px;font-weight:600;line-height:1.25}
+.fact .note{font-size:12.5px;color:var(--ink-soft)}
+.fact .note.warn{color:var(--amber)}
+
+/* ---------- timeline ---------- */
+.tl-outer{overflow-x:auto;padding-bottom:6px}
+.timeline{display:grid;grid-template-columns:58px 1fr 1.4fr 2.6fr 2.2fr 2fr 1.5fr;min-width:760px;gap:3px}
+.ph{border-radius:8px;padding:10px 12px 12px;color:#F7FAF5;position:relative}
+.ph .ph-k{font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.ph .ph-name{font-family:"Bitter",Georgia,serif;font-weight:600;font-size:14.5px;margin-top:2px}
+.ph .ph-sub{font-size:11.5px;opacity:.85;margin-top:2px}
+.ph-pre{background:var(--ph-pre)}.ph-kick{background:var(--ph-kick)}
+.ph-early{background:var(--ph-early)}.ph-mid{background:var(--ph-mid)}
+.ph-int{background:var(--ph-int)}.ph-reh{background:var(--ph-reh)}.ph-tour{background:var(--ph-tour)}
+.tl-meta{
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:14px;
+  font-size:13px;color:var(--ink-soft);
+}
+.tl-meta .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--rust);margin-right:6px;vertical-align:0}
+.event-set{display:flex;align-items:center;gap:8px;margin-left:auto;flex-wrap:wrap}
+.event-set label{font-weight:500}
+.event-set input[type=date]{
+  font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:4px 8px;
+}
+.countdown{
+  background:var(--surface-2);border:1px solid var(--line);border-radius:999px;
+  padding:3px 12px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;
+}
+
+/* ---------- checklist ---------- */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.todo-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.todo-head h3{font-size:16px}
+.progress{font-size:12.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums;white-space:nowrap}
+.todo{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.todo li{display:flex;gap:11px;align-items:flex-start;padding:8px 2px;border-top:1px solid var(--line-soft)}
+.todo li:first-child{border-top:0}
+.todo input[type=checkbox]{
+  appearance:none;flex:none;width:17px;height:17px;margin-top:2px;
+  border:1.5px solid var(--ink-soft);border-radius:4px;background:var(--surface);cursor:pointer;
+}
+.todo input[type=checkbox]:checked{background:var(--accent);border-color:var(--accent)}
+.todo input[type=checkbox]:checked::after{
+  content:"";display:block;width:4px;height:8px;margin:1px auto 0;
+  border:solid var(--accent-ink);border-width:0 2px 2px 0;transform:rotate(42deg);
+}
+.todo label{cursor:pointer;font-size:14.5px}
+.todo input:checked + label{color:var(--ink-soft);text-decoration:line-through;text-decoration-color:var(--line)}
+.todo .hint{color:var(--ink-soft);font-size:12.5px}
+
+/* ---------- workstreams ---------- */
+.streams{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.stream{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.stream .bar{height:5px}
+.stream .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.stream h3{font-size:17px}
+.stream p{font-size:13.8px;color:var(--ink-soft)}
+.stream ul{margin:0;padding-left:18px;font-size:13.8px;color:var(--ink);display:flex;flex-direction:column;gap:5px}
+.stream .goto{
+  margin-top:auto;padding-top:10px;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-soft);
+}
+.stream .goto a{color:var(--accent);font-weight:500;text-decoration:none}
+.stream .goto a:hover{text-decoration:underline}
+
+/* ---------- folders ---------- */
+.folders{display:flex;flex-direction:column;gap:2px}
+.folder{
+  display:grid;grid-template-columns:230px 1fr;gap:14px;align-items:baseline;
+  padding:9px 12px;border-radius:7px;
+}
+.folder:nth-child(odd){background:var(--surface)}
+.folder:nth-child(even){background:transparent}
+.folder .path{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500;color:var(--accent);text-decoration:none}
+.folder .path:hover{text-decoration:underline}
+.folder .what{font-size:13.8px;color:var(--ink-soft)}
+.folder .what a{color:var(--accent);font-weight:500;text-decoration:none}
+.folder .what a:hover{text-decoration:underline}
+.folder:hover{background:var(--surface-2)}
+.folders-note{margin:12px 2px 0;font-size:12.5px;color:var(--ink-soft)}
+
+/* ---------- links ---------- */
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px}
+.link-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:13px 15px;display:flex;flex-direction:column;gap:3px}
+a.link-card{color:inherit;text-decoration:none}
+a.link-card:hover{border-color:var(--accent)}
+.link-card .t{font-weight:600;font-size:14px}
+.link-card .u{font-family:"IBM Plex Mono",monospace;font-size:11.8px;color:var(--ink-soft);word-break:break-all}
+footer{padding-top:26px;color:var(--ink-soft);font-size:12.5px}
+@media (max-width:640px){
+  .folder{grid-template-columns:1fr;gap:2px}
+  .event-set{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">FIRST® LEGO® League Challenge · 2026–27 · FIRST® CANOPY™</div>
+  <h1>BIOGLOW Coach Field Guide</h1>
+  <p class="deck">Your working dashboard for the season: what’s verified about BIOGLOW, where the
+  14 weeks go, what to do this week, and where everything lives in the team workspace.</p>
+  <div class="chips">
+    <span class="chip">Red Stormgears</span>
+    <span class="chip">Andrew · Eric · Emily · Ethan</span>
+    <span class="chip"><b>Experience</b> mixed</span>
+    <span class="chip"><b>Cadence</b> 2× 2 hrs / week</span>
+    <span class="chip"><b>Kit</b> SPIKE Prime ✓ table ✓ mat ✓</span>
+  </div>
+</header>
+
+<section>
+  <div class="sec-head"><span class="kicker">Season facts</span><h2>Verified August 2026</h2></div>
+  <div class="facts">
+    <div class="fact">
+      <span class="label">Theme</span>
+      <span class="value">Biodiversity</span>
+      <span class="note">Ecosystems &amp; the nature–human balance. A bioluminescence angle is community speculation — <span class="warn">let the Challenge Guide decide.</span></span>
+    </div>
+    <div class="fact">
+      <span class="label">Edition</span>
+      <span class="value">Founders Edition</span>
+      <span class="note">Classic game: SPIKE Prime, autonomous 2:30 matches. Confirm with your Program Delivery Partner.</span>
+    </div>
+    <div class="fact">
+      <span class="label">Challenge release</span>
+      <span class="value num">Aug 4, 2026</span>
+      <span class="note">Materials unlocked via the FIRST Dashboard once registered.</span>
+    </div>
+    <div class="fact">
+      <span class="label">Heads-up</span>
+      <span class="value">Final FLL season</span>
+      <span class="note">FIRST × LEGO end after 2026–27. Talk with families about next year early.</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="kicker">Season arc</span><h2>Fourteen weeks, two meetings each</h2></div>
+  <div class="tl-outer">
+    <div class="timeline">
+      <div class="ph ph-pre"><div class="ph-k">Now</div><div class="ph-name">Pre-season</div><div class="ph-sub">register · screen · prep</div></div>
+      <div class="ph ph-kick"><div class="ph-k">Weeks 1–2</div><div class="ph-name">Kickoff</div><div class="ph-sub">norms · field build</div></div>
+      <div class="ph ph-early"><div class="ph-k">Weeks 3–4</div><div class="ph-name">Early</div><div class="ph-sub">first mission · pick problem</div></div>
+      <div class="ph ph-mid"><div class="ph-k">Weeks 5–8</div><div class="ph-name">Mid-season</div><div class="ph-sub">reliable runs · experts · prototype</div></div>
+      <div class="ph ph-int"><div class="ph-k">Weeks 9–11</div><div class="ph-name">Integration</div><div class="ph-sub">chained runs · feedback loop</div></div>
+      <div class="ph ph-reh"><div class="ph-k">Weeks 12–13</div><div class="ph-name">Rehearsal</div><div class="ph-sub">mock judging · lock scope</div></div>
+      <div class="ph ph-tour"><div class="ph-k">Week 14</div><div class="ph-name">Tournament</div><div class="ph-sub">taper · compete</div></div>
+    </div>
+  </div>
+  <div class="tl-meta">
+    <span><span class="dot"></span>Green → amber encodes the calendar: summer growth into late-season focus.</span>
+    <span class="event-set">
+      <label for="event-date">Event date</label>
+      <input type="date" id="event-date">
+      <span class="countdown num" id="countdown" hidden></span>
+    </span>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="kicker">Do this week</span><h2>Pre-season actions</h2></div>
+  <div class="card">
+    <div class="todo-head">
+      <h3>Before the first meeting</h3>
+      <span class="progress num" id="todo-progress"></span>
+    </div>
+    <ul class="todo" id="todo">
+      <li><input type="checkbox" id="t1"><label for="t1">Register the team with FIRST, then join a local event via your Program Delivery Partner</label></li>
+      <li><input type="checkbox" id="t2"><label for="t2">Recruit a second registered adult coach — FLL requires two screened adults</label></li>
+      <li><input type="checkbox" id="t3"><label for="t3">Complete Youth Protection training + background screening <span class="hint">(takes days–weeks; start now)</span></label></li>
+      <li><input type="checkbox" id="t4"><label for="t4">Collect consent + media release forms from every family</label></li>
+      <li><input type="checkbox" id="t5"><label for="t5">Download season docs from the Dashboard: Challenge, Challenge Guide, rubrics, Team Meeting Guide</label></li>
+      <li><input type="checkbox" id="t6"><label for="t6">Watch the Aug 4 kickoff video; skim missions with the field mat laid out flat</label></li>
+      <li><input type="checkbox" id="t7"><label for="t7">Update SPIKE hub firmware; charge everything; verify the table is square</label></li>
+      <li><input type="checkbox" id="t8"><label for="t8">Set the 2×/week schedule with families and fill in the season calendar</label></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="kicker">Workstreams</span><h2>Three things run in parallel</h2></div>
+  <div class="streams">
+    <div class="stream">
+      <div class="bar ph-early"></div>
+      <div class="body">
+        <h3>Robot Game</h3>
+        <p>Consistency beats peak score: rank missions by <b>(points × success rate) ÷ time</b> and bank easy ones first.</p>
+        <ul>
+          <li>Start from a proven one-kit base (DroidBot 3M, Educator++), then let the team’s own iteration story happen on top</li>
+          <li>Skill ladder: drive → turns → sensors → attachments → My Blocks → navigation</li>
+          <li>Reliability bar: 5 clean runs in a row before a mission counts</li>
+        </ul>
+        <span class="goto">workspace: <a href="03-Robot-Game/README.html">03-Robot-Game/</a></span>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="bar ph-int"></div>
+      <div class="body">
+        <h3>Innovation Project</h3>
+        <p>Problem → research → innovative solution → feedback → share. Kid-chosen, expert-informed.</p>
+        <ul>
+          <li>Expert outreach is the #1 bottleneck — start emails in week 3 (template ready)</li>
+          <li>Brainstorm wide, then one precise problem statement</li>
+          <li>Seed ideas for biodiversity and living light on file</li>
+        </ul>
+        <span class="goto">workspace: <a href="04-Innovation-Project/README.html">04-Innovation-Project/</a></span>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="bar ph-reh"></div>
+      <div class="body">
+        <h3>Core Values &amp; Judging</h3>
+        <p>Three judged sessions carry as much weight as robot score — rookie teams win through them.</p>
+        <ul>
+          <li>10 minutes of team-building opens every meeting</li>
+          <li>Engineering notebook from day one: failed attempt → fix → measured result is judging gold</li>
+          <li>Every kid speaks; RDES written by kids, printed ×3</li>
+        </ul>
+        <span class="goto">workspace: <a href="05-Core-Values/README.html">05</a> · <a href="06-Judging-Portfolio/README.html">06</a> · <a href="07-Tournament/README.html">07</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="kicker">Workspace</span><h2>Where everything lives</h2></div>
+  <div class="folders">
+    <div class="folder"><a class="path" href="CHECKLIST.html">CHECKLIST.md</a><span class="what">Master season checklist, pre-season through post-tournament</span></div>
+    <div class="folder"><a class="path" href="00-Admin/README.html">00-Admin/</a><span class="what"><a href="00-Admin/team-roster-and-forms.html">Roster &amp; forms</a>, <a href="00-Admin/inventory.html">equipment inventory</a>, budget notes</span></div>
+    <div class="folder"><a class="path" href="01-Season-Plan/README.html">01-Season-Plan/</a><span class="what"><a href="01-Season-Plan/season-calendar.html">Fill-in calendar</a>, <a href="01-Season-Plan/week-by-week-arc.html">phase-by-phase arc</a> with exit criteria</span></div>
+    <div class="folder"><a class="path" href="02-Meetings/README.html">02-Meetings/</a><span class="what">Standard 2-hour agenda, <a href="02-Meetings/meeting-plan-template.html">meeting template</a>, <a href="02-Meetings/week-01/README.html">Week 1 fully planned</a></span></div>
+    <div class="folder"><a class="path" href="03-Robot-Game/README.html">03-Robot-Game/</a><span class="what"><a href="03-Robot-Game/mission-analysis.html">Mission analysis</a>, <a href="03-Robot-Game/run-strategy.html">run strategy</a>, <a href="03-Robot-Game/code-log.html">code log</a>, <a href="03-Robot-Game/lessons/README.html">7-lesson skill ladder</a></span></div>
+    <div class="folder"><a class="path" href="04-Innovation-Project/README.html">04-Innovation-Project/</a><span class="what"><a href="04-Innovation-Project/problem-brainstorm.html">Brainstorm</a>, <a href="04-Innovation-Project/research-log.html">research log</a>, <a href="04-Innovation-Project/expert-outreach.html">expert outreach + email template</a>, <a href="04-Innovation-Project/presentation-planner.html">presentation planner</a></span></div>
+    <div class="folder"><a class="path" href="05-Core-Values/README.html">05-Core-Values/</a><span class="what"><a href="05-Core-Values/team-building-activities.html">Ten team-building activities</a>, <a href="05-Core-Values/reflections.html">WWW/EBI reflection log</a></span></div>
+    <div class="folder"><a class="path" href="06-Judging-Portfolio/README.html">06-Judging-Portfolio/</a><span class="what">Binder outline + <a href="06-Judging-Portfolio/mock-judging-session-script.html">mock-judging script</a> to hand any adult</span></div>
+    <div class="folder"><a class="path" href="07-Tournament/README.html">07-Tournament/</a><span class="what"><a href="07-Tournament/tournament-day-checklist.html">Week-before and day-of checklists</a>, <a href="07-Tournament/packing-list.html">packing list</a></span></div>
+    <div class="folder"><a class="path" href="08-Resources/README.html">08-Resources/</a><span class="what">Verified links: official docs, PrimeLessons, FLL Tutorials, flltools</span></div>
+  </div>
+  <p class="folders-note">Every link opens a styled page generated from its markdown source. Edit the <span class="mono">.md</span> files, then re-run <span class="mono">python3 _guides/build_guide.py</span> to refresh. Everything is relative — the folder works from disk, a USB stick, or any static host unchanged.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="kicker">Start here</span><h2>Five links</h2></div>
+  <div class="links">
+    <a class="link-card" href="https://primelessons.org/en/Lessons.html"><span class="t">PrimeLessons — Word Blocks curriculum</span><span class="u">primelessons.org/en/Lessons.html</span></a>
+    <a class="link-card" href="https://flltutorials.com/en/RobotGame.html"><span class="t">FLL Tutorials — Robot Game decks &amp; base builds</span><span class="u">flltutorials.com/en/RobotGame.html</span></a>
+    <a class="link-card" href="https://flltutorials.com/en/Project.html"><span class="t">FLL Tutorials — Innovation Project sequence</span><span class="u">flltutorials.com/en/Project.html</span></a>
+    <a class="link-card" href="https://www.firstinspires.org/robotics/fll/start-a-team"><span class="t">FIRST — start a team &amp; season materials</span><span class="u">firstinspires.org/robotics/fll/start-a-team</span></a>
+    <a class="link-card" href="http://flltools.flltutorials.com"><span class="t">flltools — scorer, planner, rubrics</span><span class="u">flltools.flltutorials.com</span></a>
+  </div>
+  <footer>
+    Facts verified against firstinspires.org in August 2026; community-sourced items are marked in
+    <a href="08-Resources/README.html"><span class="mono">08-Resources/README.md</span></a>. Kids do the work; the coach asks the questions.
+  </footer>
+</section>
+
+</div>
+<script>
+(function(){
+  // checklist persistence
+  var ids=["t1","t2","t3","t4","t5","t6","t7","t8"];
+  var prog=document.getElementById("todo-progress");
+  function refresh(){
+    var done=ids.filter(function(i){return document.getElementById(i).checked}).length;
+    prog.textContent=done+" of "+ids.length+" done";
+  }
+  ids.forEach(function(i){
+    var el=document.getElementById(i);
+    try{el.checked=localStorage.getItem("bioglow-"+i)==="1"}catch(e){}
+    el.addEventListener("change",function(){
+      try{localStorage.setItem("bioglow-"+i,el.checked?"1":"0")}catch(e){}
+      refresh();
+    });
+  });
+  refresh();
+
+  // event date -> countdown
+  var input=document.getElementById("event-date");
+  var out=document.getElementById("countdown");
+  function show(){
+    if(!input.value){out.hidden=true;return}
+    var ev=new Date(input.value+"T00:00:00");
+    var now=new Date();now.setHours(0,0,0,0);
+    var d=Math.round((ev-now)/86400000);
+    out.hidden=false;
+    out.textContent=d>1?d+" days out":(d===1?"tomorrow":(d===0?"today":"passed"));
+    try{localStorage.setItem("bioglow-event",input.value)}catch(e){}
+  }
+  try{var saved=localStorage.getItem("bioglow-event");if(saved){input.value=saved}}catch(e){}
+  input.addEventListener("change",show);
+  show();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 06 — Programming Patterns &amp; My Blocks</title>
+<link rel="stylesheet" href="../../_guides/guide.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="masthead">
+  <div class="eyebrow">Red Stormgears · FLL Challenge · BIOGLOW 2026–27</div>
+  <div class="crumbs"><a href="../../index.html">Workspace</a> / <span class="cur">03-Robot-Game/lessons</span></div>
+  <h1>Lesson 06 — Programming Patterns &amp; My Blocks</h1>
+</header>
+<main>
+<p><strong>Concepts:</strong> organizing code so the pilot can find the right program in seconds and any team member can modify any run.</p>
+<h2>Warm-up (5 min)</h2>
+<p>Show them a 60-block wall of code. Ask: "The judge asks what this does. Answer in 10 seconds." Then: "What if it were 5 named chunks?"</p>
+<h2>Teach (10 min)</h2>
+<ul>
+<li><strong>One program per run</strong>, named consistently (<code>R1-biobay-v3</code>), selected from</li>
+<p>  the program list on the hub — the pilot never edits code at the table.</p>
+<li><strong>My Blocks (functions):</strong> wrap reusable maneuvers — <code>alignWall()</code>,</li>
+<p>  <code>lineToDock()</code>, <code>dropArm()</code> — then a run reads like a story.</p>
+<li><strong>Program flow discipline:</strong> sounds/screen labels at run start so the pilot</li>
+<p>  confirms the right program is loaded. Wait-for-button-start if the team   wants a consistent launch moment.</p>
+<li>(If any team moves to Python: same structure, <code>def</code> instead of My Blocks.</li>
+<p>  Word Blocks are entirely sufficient for this age; switch only if the kid   is genuinely excited.)</p>
+</ul>
+<h2>Hands-on (25 min)</h2>
+<ol>
+<li>Refactor the team's longest existing program into My Blocks.</li>
+<li>Add start sounds/labels to every existing program.</li>
+<li>Rename all programs to the agreed convention in <a href="../code-log.html">code-log.md</a>.</li>
+</ol>
+<h2>Debrief (5 min)</h2>
+<ul>
+<li>Trade robots/programs: can your teammate run <em>your</em> run from the hub alone?</li>
+</ul>
+<h2>Success criteria</h2>
+<p><input type="checkbox" aria-label="unchecked"> Every run program named per convention, with start labels <input type="checkbox" aria-label="unchecked"> At least 2 My Blocks in active use <input type="checkbox" aria-label="unchecked"> Any kid can load and launch any run unaided</p>
+</main>
+<footer>
+  Part of the Red Stormgears season workspace ·
+  <a href="../../coach-dashboard.html">← Coach dashboard</a> ·
+  <a href="../../CHECKLIST.html">Master checklist</a>
+  <br>Generated from <code>06-programming-patterns.md</code> — edit the markdown, re-run
+  <code>_guides/build_guide.py</code> to refresh this page.
+</footer>
+</div>
+</body>
+</html>

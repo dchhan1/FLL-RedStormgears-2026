@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 04 — Line Following</title>
+<link rel="stylesheet" href="../../_guides/guide.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="masthead">
+  <div class="eyebrow">Red Stormgears · FLL Challenge · BIOGLOW 2026–27</div>
+  <div class="crumbs"><a href="../../index.html">Workspace</a> / <span class="cur">03-Robot-Game/lessons</span></div>
+  <h1>Lesson 04 — Line Following</h1>
+</header>
+<main>
+<p><strong>Concepts:</strong> two-state (zigzag) following with one color sensor; when line following beats dead reckoning. Many strong teams use it for long, precise approaches; many others never need it. Teach it, let the team decide.</p>
+<h2>Warm-up (5 min)</h2>
+<p>Ask: "Our robot drifts over a 1.5 m drive. What could correct it continuously?" Let them generate: walls, lines, landmarks.</p>
+<h2>Teach (10 min)</h2>
+<ul>
+<li>One-sensor zigzag: if you see the line edge, steer left; else steer right.</li>
+<p>  The robot wiggles along the edge. Slow but self-correcting.</p>
+<li>In Word Blocks: a <code>repeat forever</code> (or repeat-until) with an</li>
+<p>  <code>if color &lt; threshold → steering −20, else +20</code> structure.</p>
+<li>Tuning: sensor height (~5–10 mm), speed vs. accuracy trade-off.</li>
+</ul>
+<h2>Hands-on (25 min)</h2>
+<ol>
+<li>Follow a straight black line on the mat edge to edge. Time it.</li>
+<li>Follow a curve. Where does it lose the line? Adjust speed.</li>
+<li>Combine: dead-reckon most of the distance, line-follow the last stretch</li>
+<p>   into a mission, end on a line-stop.</p>
+</ol>
+<h2>Debrief (5 min)</h2>
+<ul>
+<li>Which missions on our field have usable lines nearby? Check the field map.</li>
+<li>Decide as a team: adopt for specific approaches or skip this season.</li>
+</ul>
+<h2>Success criteria</h2>
+<p><input type="checkbox" aria-label="unchecked"> Follows a straight line edge-to-edge without losing it <input type="checkbox" aria-label="unchecked"> Team has made an explicit adopt/skip decision with reasons (log it in   the design decisions log)</p>
+</main>
+<footer>
+  Part of the Red Stormgears season workspace ·
+  <a href="../../coach-dashboard.html">← Coach dashboard</a> ·
+  <a href="../../CHECKLIST.html">Master checklist</a>
+  <br>Generated from <code>04-line-following.md</code> — edit the markdown, re-run
+  <code>_guides/build_guide.py</code> to refresh this page.
+</footer>
+</div>
+</body>
+</html>

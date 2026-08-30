@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 03 — Sensors: Gyro &amp; Color</title>
+<link rel="stylesheet" href="../../_guides/guide.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="masthead">
+  <div class="eyebrow">Red Stormgears · FLL Challenge · BIOGLOW 2026–27</div>
+  <div class="crumbs"><a href="../../index.html">Workspace</a> / <span class="cur">03-Robot-Game/lessons</span></div>
+  <h1>Lesson 03 — Sensors: Gyro &amp; Color</h1>
+</header>
+<main>
+<p><strong>Concepts:</strong> what sensors measure, reading live values, using conditions. Sensors turn "hope" into "know."</p>
+<h2>Warm-up (5 min)</h2>
+<p>Play "robot navigator": one kid blindfold-voice-controls another to a target — then compare to the same kid walking it with eyes open. Sensors = eyes.</p>
+<h2>Teach (10 min)</h2>
+<ul>
+<li><strong>Gyroscope:</strong> measures heading/rotation. Use: <code>when [heading] = X</code> or</li>
+<p>  <code>turn to heading</code>. Caveat: gyro can drift; keep robot still while starting.</p>
+<li><strong>Color sensor:</strong> reads reflected light / color. Black lines read "dark",</li>
+<p>  mat reads "light" — show live values over both.</p>
+<li><strong>Motor sensors:</strong> every motor knows its position — useful for detecting a</li>
+<p>  stalled attachment (pressing against something).</p>
+</ul>
+<h2>Hands-on (25 min)</h2>
+<ol>
+<li>Gyro square (from Lesson 02) — now with <code>turn to heading</code> blocks only.</li>
+<li>Color: stop exactly when crossing a black line. Then: wait for line,</li>
+<p>   then turn. Precision check with a ruler.</p>
+<li>Wall squaring: drive backward into the wall for 1 second — robot</li>
+<p>   self-aligns square. Run a "drive out, come back, square up, drive out    again" loop and check the second departure is identical to the first.</p>
+</ol>
+<h2>Debrief (5 min)</h2>
+<ul>
+<li>Which alignments are free on our field? (walls, lines, mission models)</li>
+<li>Rule of thumb: never rely on pure dead-reckoning for the last 10 cm before</li>
+<p>  a mission — line up on something real.</p>
+</ul>
+<h2>Success criteria</h2>
+<p><input type="checkbox" aria-label="unchecked"> Gyro square within a few cm <input type="checkbox" aria-label="unchecked"> Can stop on a line ±1 cm, 3× in a row <input type="checkbox" aria-label="unchecked"> Has used wall-squaring in at least one mission approach</p>
+</main>
+<footer>
+  Part of the Red Stormgears season workspace ·
+  <a href="../../coach-dashboard.html">← Coach dashboard</a> ·
+  <a href="../../CHECKLIST.html">Master checklist</a>
+  <br>Generated from <code>03-sensors.md</code> — edit the markdown, re-run
+  <code>_guides/build_guide.py</code> to refresh this page.
+</footer>
+</div>
+</body>
+</html>

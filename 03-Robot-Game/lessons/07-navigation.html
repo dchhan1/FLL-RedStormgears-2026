@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 07 — Navigation Strategies</title>
+<link rel="stylesheet" href="../../_guides/guide.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="masthead">
+  <div class="eyebrow">Red Stormgears · FLL Challenge · BIOGLOW 2026–27</div>
+  <div class="crumbs"><a href="../../index.html">Workspace</a> / <span class="cur">03-Robot-Game/lessons</span></div>
+  <h1>Lesson 07 — Navigation Strategies</h1>
+</header>
+<main>
+<p><strong>Concepts:</strong> choosing between dead reckoning, landmarks, line following, and wall following — usually a mix. This is a design-decision conversation as much as a lesson; hold it around week 7 with the field map in front of you.</p>
+<h2>The menu</h2>
+<div class="tblwrap"><table><thead><tr><th>Strategy</th><th>How</th><th>Strengths</th><th>Weaknesses</th></tr></thead><tbody><tr><td>Dead reckoning</td><td>rotations + gyro turns only</td><td>Fast; no sensors needed</td><td>Errors compound</td></tr><tr><td>Wall following</td><td>drive hugging the border wall</td><td>Very repeatable on FLL fields</td><td>Only reaches wall routes</td></tr><tr><td>Line following</td><td>color sensor on black lines</td><td>Self-correcting</td><td>Slower; needs lines</td></tr><tr><td>Landmark squaring</td><td>square up on walls/models between steps</td><td>Resets accumulated error</td><td>Costs seconds</td></tr></tbody></table></div>
+<h2>Team exercise (25 min)</h2>
+<p>For each planned run on <a href="../run-strategy.html">run-strategy.md</a>, mark the route on a printed field map and choose strategies per leg:</p>
+<ul>
+<li>Long open transit → wall follow or gyro straight</li>
+<li>Approach to mission → line follow or square-up, then short final move</li>
+<li>Return home → wall bounce ( forgiving) if it helps the next run's start</li>
+</ul>
+<h2>Decision rules</h2>
+<ol>
+<li>Every run should include at least one <strong>error reset</strong> (square-up, line</li>
+<p>   catch) unless it's very short.</p>
+<li>Prefer routes where being slightly wrong still scores — near-misses beat</li>
+<p>   knife-edges.</p>
+<li>Log each route decision in the design decisions log with the reason.</li>
+</ol>
+<h2>Success criteria</h2>
+<p><input type="checkbox" aria-label="unchecked"> Field map annotated with routes and strategies per run <input type="checkbox" aria-label="unchecked"> Each run has an explicit error-reset step</p>
+</main>
+<footer>
+  Part of the Red Stormgears season workspace ·
+  <a href="../../coach-dashboard.html">← Coach dashboard</a> ·
+  <a href="../../CHECKLIST.html">Master checklist</a>
+  <br>Generated from <code>07-navigation.md</code> — edit the markdown, re-run
+  <code>_guides/build_guide.py</code> to refresh this page.
+</footer>
+</div>
+</body>
+</html>

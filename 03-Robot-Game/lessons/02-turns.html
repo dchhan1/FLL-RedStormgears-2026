@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 02 — Precise Turns</title>
+<link rel="stylesheet" href="../../_guides/guide.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="masthead">
+  <div class="eyebrow">Red Stormgears · FLL Challenge · BIOGLOW 2026–27</div>
+  <div class="crumbs"><a href="../../index.html">Workspace</a> / <span class="cur">03-Robot-Game/lessons</span></div>
+  <h1>Lesson 02 — Precise Turns</h1>
+</header>
+<main>
+<p><strong>Concepts:</strong> pivot vs. spin turns, calculating turn angle from wheel rotations, introducing the gyro as the accurate alternative.</p>
+<h2>Warm-up challenge (5 min)</h2>
+<p>"Face the robot exactly 90° to the left." Judge by eye — most teams are off 5–10°, and that error compounds down the field.</p>
+<h2>Teach (10 min)</h2>
+<ul>
+<li><strong>Spin turn:</strong> both wheels opposite directions — robot pivots in place;</li>
+<p>  uses less space. <strong>Pivot turn:</strong> one wheel stopped — arc turn.</p>
+<li>Wheel math: robot spins about its center; each wheel travels</li>
+<p>  (turn angle / 360) × robot's turn circumference. It's faster for kids to   <strong>calibrate empirically</strong>: try X rotations → measure actual angle → scale.</p>
+<li>The compounding problem: 3° error on turn 1 becomes a miss by turn 3.</li>
+</ul>
+<h2>Hands-on (25 min)</h2>
+<ol>
+<li>Calibrate a 90° spin turn: guess → measure with protractor phone app → adjust.</li>
+<li>Drive a square (4 × "straight 40 cm, turn 90°"). End where you started?</li>
+<li>Introduce gyro: <code>turn to heading 90</code> block. Run the square again. Compare.</li>
+</ol>
+<h2>Debrief (5 min)</h2>
+<ul>
+<li>When is wheel-turning fine? (short runs, re-alignable next step)</li>
+<li>When do you need the gyro? (long approaches, chained turns)</li>
+</ul>
+<h2>Success criteria</h2>
+<p><input type="checkbox" aria-label="unchecked"> Square ends within 5 cm of start with gyro turns <input type="checkbox" aria-label="unchecked"> Can name one situation for each method</p>
+</main>
+<footer>
+  Part of the Red Stormgears season workspace ·
+  <a href="../../coach-dashboard.html">← Coach dashboard</a> ·
+  <a href="../../CHECKLIST.html">Master checklist</a>
+  <br>Generated from <code>02-turns.md</code> — edit the markdown, re-run
+  <code>_guides/build_guide.py</code> to refresh this page.
+</footer>
+</div>
+</body>
+</html>
